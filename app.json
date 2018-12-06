@@ -1,16 +1,17 @@
 {
   "expo": {
     "name": "Playlist",
-    "description": "A playlist of some songs that Greg likes to demo the Expo AV API.",
+    "description":
+      "A playlist of some songs that Greg likes to demo the Expo AV API.",
     "slug": "playlist",
     "privacy": "public",
-    "sdkVersion": "29.0.0",
+    "sdkVersion": "31.0.0",
     "version": "3.0.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
     "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/icon.png",
+      "image": "./assets/images/icon.png"
     },
     "packagerOpts": {
       "assetExts": ["ttf", "png"]

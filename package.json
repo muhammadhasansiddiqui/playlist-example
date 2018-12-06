@@ -3,11 +3,21 @@
   "version": "0.0.0",
   "description": "A playlist of some songs that Greg likes to demo the Expo AV API.",
   "author": "support@expo.io",
+  "contributors": [
+    "Stefan Natter <stefan@natter.at>"
+  ],
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start -c"
+  },
   "dependencies": {
-    "expo": "^30.0.0-rc.0",
-    "react": "16.3.1",
-    "react-native": "expo/react-native#sdk-30.0.0"
+    "@expo/vector-icons": "8.0.0",
+    "expo": "31.0.6",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz"
+  },
+  "devDependencies": {
+    "eslint-config-ns": "0.2.0"
   }
 }
