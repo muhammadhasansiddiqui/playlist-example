@@ -18,6 +18,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz"
   },
   "devDependencies": {
-    "eslint-config-ns": "0.2.0"
+    "eslint-config-ns": "0.2.0",
+    "expo-cli": "2.6.5"
   }
 }
