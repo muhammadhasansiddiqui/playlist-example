@@ -303,6 +303,9 @@ export default class App extends React.Component {
     if (this.playbackInstance != null) {
       await this.playbackInstance.unloadAsync();
 
+      /**
+       * NOTE: see why I added the if in the comment below
+       */
       if (this.playbackInstance.setOnPlaybackStatusUpdate) {
         console.warn('REMOVE setOnPlaybackStatusUpdate');
         this.playbackInstance.setOnPlaybackStatusUpdate(null);
@@ -329,6 +332,18 @@ export default class App extends React.Component {
     ) // eslint-disable-line
     if (PLAYLIST[this.index].isVideo) {
       await this._video.loadAsync(source, initialStatus);
+
+      /**
+       * NOTE: it looks like setOnPlaybackStatusUpdate on the video ref is always
+       * undefined, _but_ it is removed (reset) above at ~L306. So my assumption
+       * (I did no further research) is that the property `onPlaybackStatusUpdate`
+       * below already sets it and so the logic below is not needed anymore.
+       *
+       * Possible proof, the console.log in _onPlaybackStatusUpdate is executed
+       * even when this if is never true.
+       *
+       * TODO: further investigate if this is still needed and how it is supposed to work
+       */
       if (this._video.setOnPlaybackStatusUpdate) {
         console.warn('ADD setOnPlaybackStatusUpdate');
         this._video.setOnPlaybackStatusUpdate(this._onPlaybackStatusUpdate);
